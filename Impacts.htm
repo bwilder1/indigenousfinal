@@ -11,6 +11,8 @@
 
 	<style>
 
+img {border:5px solid black; display:block; margin:auto;}
+
 	</style>
 
   <script type="text/javascript">
@@ -24,6 +26,24 @@ function myFunction() {
 			}
 		}
 
+    
+    var isImageChanged = false;
+  function changeImage() {
+    
+    var myimg = document.getElementById("one");
+
+    if (isImageChanged) {
+      myimg.src = "Map1.png";
+      myimg.alt = "Colonialism";
+      myimg.title = "Colonialism";
+      isImageChanged = false;
+    } else {
+      myimg.src = "Map2.png";
+      myimg.alt = "Post-colonialism";
+      myimg.title = "Post-colonialism";
+      isImageChanged = true;
+    }
+  }
 
   </script>
 	
@@ -41,7 +61,7 @@ function myFunction() {
       <a href="Impacts.htm" class="active">Impacts</a>
       <a href="ContMarkers.htm">Contemporary Markers</a>   
       <a href="Status.htm">Current Status</a>
-      <a href="Claims.htm">Claims</a>
+      <a href="Claims.htm">Sources</a>
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
 
@@ -78,7 +98,7 @@ function myFunction() {
       <p>
         <span style="font-weight: bold; font-size: 15px;">Forced Relocation:</span> Missouri gained statehood in 1821, just 18 years after the 
         Louisiana Purchase. Soon after the declaration of statehood, over 5,000 Osage members were removed from their land
-        and forced to reside in "Indian Terrotiry" which is known known as Oklahoma. After the city of Kansas was established 
+        and forced to reside in "Indian Terrotiry" which is now known as Oklahoma. After the city of Kansas was established 
         in 1854, the Osage were relocated into a reservation within the city leaving them with heavily restricted land access.
         <p>
           <span style="font-weight: bold; font-size: 15px;">Broken Treaties:</span> The violation of treaties has been a historic 
@@ -101,6 +121,16 @@ function myFunction() {
       </p>
       <br/>
       <br/>
+
+      <h3>Pre vs Post Colonialism</h3>
+      <p>
+        Below is a map showing the land that the Osage Nation resided in before settlers came and took their land. 
+        Click on the map to show the land they now have post-colonialism. 
+      </p>
+
+      <div>
+        <img id="one" onclick="changeImage()" src="Map1.png" alt="Pre-colonialism" title="Pre-colonialism"/>
+      </div>
 
 
 
